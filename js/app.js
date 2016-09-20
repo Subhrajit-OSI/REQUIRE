@@ -5,14 +5,12 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'router',
-    'collections/ToDos'
-    ],function($,_,Backbone,AppRouter,ProjectCollection){
+    'router'
+    ],function($,_,Backbone,AppRouter){
 
     //Initialize Router
     var initialize = function(){
         AppRouter.initialize();
-        app.ProjectCollectionObj = new ProjectCollection();
     }
 
     //Return Object

@@ -5,9 +5,10 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'views/form1',
-    'views/form2'
+    'views/ToDoForm1View',
+    'views/ToDoForm2View'
 ],function($,_,Backbone,ViewsFactoryForm1,ViewsFactoryForm2){
+    var formData={};
 
     //Router Configuration
     var AppRouter = Backbone.Router.extend({
@@ -20,13 +21,13 @@ define([
             var viewsFactoryForm1 = new ViewsFactoryForm1();
             viewsFactoryForm1.render();
         },
-        form2: function(form) {
-            var viewsFactoryForm2 = new ViewsFactoryForm2();
+        form2: function(formData) {
+            var viewsFactoryForm2 = new ViewsFactoryForm2(formData);
             viewsFactoryForm2.render();
         }
     });
 
-    //Invoke Router
+    //Router Invoke
     var initialize = function(){
         var app_router = new AppRouter;
         Backbone.history.start();
@@ -37,3 +38,8 @@ define([
         initialize:initialize
     }
 });
+
+/*
+function responseFunction(data) {
+    console.log(data)
+}*/

@@ -14,14 +14,15 @@
 </head>
 <body>
     <!-- Containers -->
-    <div id="header" class="container"><h1></h1></div>
+    <div id="header"></div>
     <div id="content"></div>
     <div id="footer"></div>
 
 
     <!-- Form 1 HTML Template -->
-    <script type="text/template" id="tpl-form1">
+    <script  type="text/x-handlebars-template" id="tpl-form1">
         <div class="container">
+          <h1>{{heading}}</h1>
           <form name="user_form_1" id="user_form_1">
             <div class="form-group">
                 <label for="fname"><span class="imp">*</span> First Name : </label>
@@ -37,8 +38,9 @@
     </script>
 
     <!-- Form 2 HTML Template -->
-    <script type="text/template" id="tpl-form2">
+    <script   type="text/x-handlebars-template" id="tpl-form2">
       <div class="container">
+        <h1>{{heading}}</h1>
         <form name="user_form_2">
           <div class="form-group">
               <label for="addOne"><span class="imp">*</span> Address One : </label>

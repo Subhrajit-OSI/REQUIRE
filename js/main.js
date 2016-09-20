@@ -6,7 +6,8 @@ require.config({
     paths:{
         jquery:'libs/jquery/jquery-3.1.0.min',
         underscore:'libs/underscore/underscore-min',
-        backbone:'libs/backbone/backbone-min'
+        backbone:'libs/backbone/backbone-min',
+        handlebars:'libs/handlebars/handlebars-v4.0.5'
     }
 });
 
@@ -17,3 +18,15 @@ require(['app'],function(App){
 
 //GLobal Variable
 var app={};
+
+
+/*
+ * Method - To Convert to JSON string
+ * Input  - Custom String, Object
+ * Return - null
+ */
+function displayCollectionContents(string, collection){
+    var data_string = JSON.stringify(collection.toJSON());
+    console.log(string+" "+data_string);
+    $("#footer").html(data_string);
+}
